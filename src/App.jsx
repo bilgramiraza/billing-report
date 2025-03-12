@@ -10,7 +10,6 @@ function App() {
       <div>
         <FormOne />
         <FormTwo />
-        <button>Generate</button>
         <ReportPanel />
       </div>
     </div>
