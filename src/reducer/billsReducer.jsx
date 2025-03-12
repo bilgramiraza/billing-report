@@ -54,9 +54,9 @@ export const setFormOne = (dispatch, total, days, units) => {
   dispatch({
     type: 'setFormOne',
     payload: {
-      total,
-      days,
-      units,
+      total: Number(total),
+      days: Number(days),
+      units: Number(units),
     },
   });
 };
@@ -65,9 +65,9 @@ export const setFormTwo = (dispatch, total, days, units) => {
   dispatch({
     type: 'setFormTwo',
     payload: {
-      total,
-      days,
-      units,
+      total: Number(total),
+      days: Number(days),
+      units: Number(units),
     },
   });
 };
