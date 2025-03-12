@@ -1,3 +1,4 @@
+import { setFormOne, useBillsDispatch } from "../reducer/billsReducer";
 import { useInputs } from "../services/hooks";
 
 const FormOne = () => {
@@ -5,9 +6,11 @@ const FormOne = () => {
   const days = useInputs('days', 'number');
   const units = useInputs('units', 'number');
 
+  const billsDispatch = useBillsDispatch();
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(`Form 1: \nTotal: ${total.value} \nDays: ${days.value}\nUnits: ${units.value}`);
+    setFormOne(billsDispatch, total.value, days.value, units.value);
   };
 
   return (
