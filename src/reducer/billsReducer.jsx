@@ -3,7 +3,8 @@ import { createContext, useContext, useReducer } from "react";
 const initialState = {
   formOne: {},
   formTwo: {},
-  submitToggle: false,
+  formOneStatus: false,
+  formTwoStatus: false,
 };
 
 const billsReducer = (state, action) => {
@@ -12,16 +13,13 @@ const billsReducer = (state, action) => {
       return {
         ...state,
         formOne: action.payload,
+        formOneStatus: true,
       };
     case 'setFormTwo':
       return {
         ...state,
         formTwo: action.payload,
-      };
-    case 'toggleSubmit':
-      return {
-        ...state,
-        submitToggle: !state.submitToggle,
+        formTwoStatus: true,
       };
     case 'clear':
       return initialState;
