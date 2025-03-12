@@ -15,7 +15,7 @@ const FormTwo = () => {
 
   return (
     <div>
-      <p>Form Two</p>
+      <p>Common Bill</p>
       <form onSubmit={handleSubmit}>
         <label>
           Total: <input {...total} />
