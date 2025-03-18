@@ -1,5 +1,6 @@
 import { setFormTwo, useBillsDispatch } from "../reducer/billsReducer";
 import { useInputs } from "../services/hooks";
+import commonMarker from "../assets/CommonBillMarker.jpg";
 
 const FormTwo = () => {
   const total = useInputs('total', 'number');
@@ -14,19 +15,28 @@ const FormTwo = () => {
   };
 
   return (
-    <div>
-      <p>Common Bill</p>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Total: <input {...total} />
-        </label>
-        <label>
-          Days: <input {...days} />
-        </label>
-        <label>
-          Units: <input {...units} />
-        </label>
-        <button>Submit</button>
+    <div className="flex flex-col">
+      <div className="p-2 border border-1 border-l-2 border-solid border-white">
+        <h3 className="text text-lg font-semibold underline">Common Bill</h3>
+      </div>
+      <form onSubmit={handleSubmit} className="p-2 border border-2 border-t-1 border-solid border-white rounded-bl-lg flex flex-col">
+        <div className="flex flex-row">
+          <div className="w-1/2 mx-auto flex flex-col">
+            <label className="flex flex-row justify-center">
+              Total: <input {...total} className="mx-2 px-2 py-1 w-3/5 border border-2 border-solid border-white rounded-lg" />
+            </label>
+            <label className="flex flex-row justify-center">
+              Days: <input {...days} className="mx-2 px-2 py-1 w-3/5 border border-2 border-solid border-white rounded-lg" />
+            </label>
+            <label className="flex flex-row justify-center">
+              Units: <input {...units} className="mx-2 px-2 py-1 w-3/5 border border-2 border-solid border-white rounded-lg" />
+            </label>
+          </div>
+          <div className="w-1/2 mx-2 flex items-center justify-center">
+            <img src={commonMarker} alt="Lift Text" />
+          </div>
+        </div>
+        <button className="m-1 px-2 py-1 border border-1 border-solid border-white rounded-sm cursor-pointer">Submit</button>
       </form>
     </div>
   );
