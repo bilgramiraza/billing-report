@@ -6,8 +6,8 @@ const ReportPanel = () => {
 
   if (!(formOneStatus && formTwoStatus)) {
     return (
-      <div className=" p-2 border-3 border-t-0 md:border-t-3 md:border-l-0 border-solid border-slate-800 rounded-b-lg md:rounded-bl-none md:rounded-r-lg grow">
-        <h3 className="text text-md md:text-lg font-semibold text-slate-800">Report Panel</h3>
+      <div className=" p-2 border-3 border-t-0 md:border-t-3 md:border-l-0 border-solid border-slate-800 dark:border-slate-200 rounded-b-lg md:rounded-bl-none md:rounded-r-lg grow">
+        <h3 className="text text-md md:text-lg font-semibold text-slate-800 dark:text-slate-200">Report Panel</h3>
       </div>
     );
   }
@@ -39,12 +39,12 @@ Common units ${formTwo.units} for ${formTwo.days} days`;
   };
 
   return (
-    <div className=" p-2 border-3 border-t-0 md:border-t-3 md:border-l-0 border-solid border-slate-800 rounded-b-lg md:rounded-bl-none md:rounded-r-lg grow">
+    <div className=" p-2 border-3 border-t-0 md:border-t-3 md:border-l-0 border-solid border-slate-800 dark:border-slate-200 rounded-b-lg md:rounded-bl-none md:rounded-r-lg grow">
       <div className="flex flex-row justify-between">
-        <h3 className="text text-md md:text-lg font-semibold text-slate-800">Report Panel</h3>
-        <button onClick={handleCopy} className="m-1 px-2 py-1 border border-2 border-solid border-slate-800 rounded-sm text-md font-semibold text-slate-200 bg-indigo-600 hover:bg-indigo-400 cursor-pointer">Copy</button>
+        <h3 className="text text-md md:text-lg font-semibold text-slate-800 dark:text-slate-200">Report Panel</h3>
+        <button onClick={handleCopy} className="m-1 px-2 py-1 border border-2 border-solid border-slate-800 dark:border-slate-200 rounded-sm text-md font-semibold text-slate-200 dark:text-black bg-indigo-600 dark:bg-indigo-400 hover:bg-indigo-400 dark:hover:bg-indigo-300 cursor-pointer">Copy</button>
       </div>
-      <div className="flex flex-col grow text-sm md:text-md text-slate-800">
+      <div className="flex flex-col grow text-sm md:text-md text-slate-800 dark:text-slate-200">
         <p className="flex flex-row justify-between">
           <span>Borewell Bill (elec)</span>
           <span>{formOne.total.toFixed(2)}</span>

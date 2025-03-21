@@ -24,9 +24,9 @@ const FormOne = () => {
   };
 
   return (
-    <div className="flex flex-col border-3 rounded-t-lg md:rounded-tl-lg md:rounded-tr-none border-solid border-slate-800">
-      <div className="p-2 border-b-3 border-solid border-slate-800 flex flex-row justify-between">
-        <h3 className="text text-xl font-semibold text-slate-800">Borewell Bill</h3>
+    <div className="flex flex-col border-3 rounded-t-lg md:rounded-tl-lg md:rounded-tr-none border-solid border-slate-800 dark:border-slate-200">
+      <div className="p-2 border-b-3 border-solid border-slate-800 dark:border-slate-200 flex flex-row justify-between">
+        <h3 className="text text-xl font-semibold text-slate-800 dark:text-slate-200">Borewell Bill</h3>
         <span className={`flex size-4 m-2 ${formDisable ? 'bg-green-500 border-green-500 glow-green' : 'bg-red-500 border-red-500 glow-red'} border-1 rounded-full place-self-center`}></span>
       </div>
       <form onSubmit={handleSubmit} className="p-2 flex flex-col">
@@ -34,24 +34,24 @@ const FormOne = () => {
           <div className="flex flex-row">
             <div className="w-1/2 mx-auto flex flex-col text-sm lg:text-lg">
               <label className="my-1 flex flex-row justify-center">
-                <span className="my-auto w-1/3 text-end font-semibold text-slate-800">Total</span>
-                <input {...total} className="mx-2 px-1 lg:px-2 py-1 w-2/3 bg-white border border-2 border-solid border-slate-800 rounded-lg font-semibold text-slate-800" />
+                <span className="my-auto w-1/3 text-end font-semibold text-slate-800 dark:text-slate-200">Total</span>
+                <input {...total} className="mx-2 px-1 lg:px-2 py-1 w-2/3 bg-white dark:bg-slate-900 border border-2 border-solid border-slate-800 dark:border-slate-200 rounded-lg font-semibold text-slate-800 dark:text-slate-200" />
               </label>
               <label className="my-1 flex flex-row justify-center">
-                <span className="my-auto w-1/3 text-end font-semibold text-slate-800">Days</span>
-                <input {...days} className="mx-2 px-1 lg:px-2 py-1 w-2/3 bg-white border border-2 border-solid border-slate-800 rounded-lg font-semibold text-slate-800" />
+                <span className="my-auto w-1/3 text-end font-semibold text-slate-800 dark:text-slate-200">Days</span>
+                <input {...days} className="mx-2 px-1 lg:px-2 py-1 w-2/3 bg-white dark:bg-slate-900 border border-2 border-solid border-slate-800 dark:border-slate-200 rounded-lg font-semibold text-slate-800 dark:text-slate-200" />
               </label>
               <label className="my-1 flex flex-row justify-center">
-                <span className="my-auto w-1/3 text-end font-semibold text-slate-800">Units</span>
-                <input {...units} className="mx-2 px-1 lg:px-2 py-1 w-2/3 bg-white border border-2 border-solid border-slate-800 rounded-lg font-semibold text-slate-800" />
+                <span className="my-auto w-1/3 text-end font-semibold text-slate-800 dark:text-slate-200">Units</span>
+                <input {...units} className="mx-2 px-1 lg:px-2 py-1 w-2/3 bg-white dark:bg-slate-900 border border-2 border-solid border-slate-800 dark:border-slate-200 rounded-lg font-semibold text-slate-800 dark:text-slate-200" />
               </label>
             </div>
             <div className="w-1/2 mx-2 flex items-center justify-center">
-              <img src={borewellMarker} alt="Comm Text" className="border-2 border-solid border-slate-800" />
+              <img src={borewellMarker} alt="Comm Text" className="border-2 border-solid border-slate-800 dark:border-slate-200" />
             </div>
           </div>
         </fieldset>
-        <button className={`my-1 mx-3 px-2 py-1 border border-2 border-solid border-slate-800 rounded-sm text-lg font-semibold ${formFilled ? formDisable ? 'text-slate-800 bg-amber-500 hover:bg-amber-400 cursor-pointer' : 'text-slate-200 bg-indigo-600 hover:bg-indigo-400 cursor-pointer' : 'text-slate-800 bg-slate-200'}`} disabled={!formFilled ? 'disabled' : ''}>{formDisable ? 'Edit' : 'Submit'}</button>
+        <button className={`my-1 mx-3 px-2 py-1 border border-2 border-solid border-slate-800 dark:border-slate-200 rounded-sm text-lg font-semibold ${formFilled ? formDisable ? 'text-slate-800 dark:text-slate-900 bg-amber-500 hover:bg-amber-400 dark:bg-amber-400 dark:hover:bg-amber-300 cursor-pointer' : 'text-slate-200 dark:text-black bg-indigo-600 dark:bg-indigo-400 hover:bg-indigo-400 dark:hover:bg-indigo-300 cursor-pointer' : 'text-slate-800 dark:text-slate-200 bg-slate-200 dark:bg-slate-800'}`} disabled={!formFilled ? 'disabled' : ''}>{formDisable ? 'Edit' : 'Submit'}</button>
       </form>
     </div >
   );
