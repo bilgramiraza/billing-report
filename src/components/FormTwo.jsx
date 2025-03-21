@@ -24,7 +24,7 @@ const FormTwo = () => {
   };
 
   return (
-    <div className="flex flex-col border-3 rounded-t-lg md:rounded-tl-lg md:rounded-tr-none border-solid border-slate-800 dark:border-slate-200">
+    <div className="flex flex-col border-3 rounded-bl-none md:rounded-bl-lg border-solid border-slate-800 dark:border-slate-200">
       <div className="p-2 border-b-3 border-solid border-slate-800 dark:border-slate-200 flex flex-row justify-between">
         <h3 className="text text-xl font-semibold text-slate-800 dark:text-slate-200">Common Bill</h3>
         <span className={`flex size-4 m-2 ${formDisable ? 'bg-green-500 border-green-500 glow-green' : 'bg-red-500 border-red-500 glow-red'} border-1 rounded-full place-self-center`}></span>
