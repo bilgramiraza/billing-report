@@ -1,3 +1,4 @@
+import dayjs from "dayjs";
 import FormOne from "./components/FormOne";
 import FormTwo from "./components/FormTwo";
 import ReportPanel from "./components/ReportPanel";
@@ -16,7 +17,12 @@ function App() {
           <ReportPanel />
         </div>
       </div>
-    </div>
+      <div className="my-2 text-center">
+        <p className="text-lg font-normal italic text-slate-800 dark:text-slate-200">
+          <a href="https://github.com/bilgramiraza" target="_blank" rel="noreferrer" class="hover:underline">{`S.M. Raza Hassan Bilgrami©${dayjs().year()}`}</a>
+        </p>
+      </div>
+    </div >
   );
 }
 
